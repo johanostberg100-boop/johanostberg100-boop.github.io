@@ -2,286 +2,51 @@
 <html lang="sv">
 
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
 
-<title>Johan & Maja</title>
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
 
-<style>
+    <meta
+        name="description"
+        content="Save the Date för Johan och Majas bröllop i Dalarna den 14 augusti 2027."
+    >
 
-.save-the-date {
+    <title>Johan &amp; Maja</title>
 
-    background-image:
-        linear-gradient(
-            rgba(0,0,0,0.45),
-            rgba(0,0,0,0.45)
-        ),
-        url("images/dalarna.jpg");
+    <style>
 
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
+        * {
+            box-sizing: border-box;
+        }
 
-    padding: 120px 20px;
+        html {
+            scroll-behavior: smooth;
+        }
 
-    color: white;
-}
+        body {
+            margin: 0;
+            font-family: Georgia, "Times New Roman", serif;
+            background: #f8f5f0;
+            color: #333;
+            line-height: 1.7;
+        }
 
-.overlay {
+        /* NAVIGATION */
 
-    max-width: 900px;
-    margin: auto;
-    text-align: center;
+        nav {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
 
-    background: rgba(0,0,0,0.35);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 28px;
 
-    padding: 50px;
-    border-radius: 20px;
-}
+            padding: 18px 20px;
 
-.overlay h2 {
-
-    font-size: 3rem;
-    margin-bottom: 30px;
-}
-
-.overlay p {
-
-    line-height: 1.8;
-    font-size: 1.15rem;
-}
-    
-body {
-    margin: 0;
-    font-family: Georgia, serif;
-    background: #f8f5f0;
-    color: #333;
-}
-
-/* Meny */
-
-nav {
-    background: rgba(255,255,255,0.95);
-    padding: 18px;
-    text-align: center;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.08);
-}
-
-nav a {
-    margin: 0 15px;
-    text-decoration: none;
-    color: #556b2f;
-    font-weight: bold;
-    transition: 0.3s;
-}
-
-nav a:hover {
-    color: #8b7355;
-}
-
-/* Hero */
-
-.hero {
-    height: 100vh;
-    background:
-    linear-gradient(
-        rgba(0,0,0,0.35),
-        rgba(0,0,0,0.35)
-    ),
-    url("DSCF2694~3.jpg");
-
-    background-size: cover;
-    background-position: center;
-
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-
-    color: white;
-    text-align: center;
-}
-
-.hero h1 {
-    font-size: 4rem;
-    margin-bottom: 10px;
-}
-
-.hero p {
-    font-size: 1.4rem;
-}
-
-.countdown {
-    margin-top: 25px;
-    font-size: 2rem;
-    font-weight: bold;
-}
-
-/* Innehåll */
-
-.section {
-    max-width: 1000px;
-    margin: auto;
-    padding: 60px 20px;
-}
-
-.card {
-    background: white;
-    padding: 35px;
-    border-radius: 15px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-}
-
-h2 {
-    text-align: center;
-    margin-top: 0;
-}
-
-.btn {
-    display: inline-block;
-    background: #556b2f;
-    color: white;
-    padding: 15px 30px;
-    border-radius: 10px;
-    text-decoration: none;
-    transition: 0.3s;
-}
-
-.btn:hover {
-    background: #6f8541;
-}
-
-footer {
-    text-align: center;
-    padding: 40px;
-    background: #eee;
-}
-
-@media (max-width: 768px) {
-
-    .hero h1 {
-        font-size: 2.5rem;
-    }
-
-    nav a {
-        display: block;
-        margin: 10px 0;
-    }
-}
-
-</style>
-</head>
-
-<body>
-
-<nav>
-    <a href="index.html">Hem</a>
-    <a href="schema.html">Bröllopshelg</a>
-    <a href="boende.html">Boende</a>
-    <a href="osa.html">OSA</a>
-    <a href="faq.html">FAQ</a>
-</nav>
-
-<section class="hero">
-
-    <h1>Johan &amp; Maja</h1>
-
-    <p>
-        Vi gifter oss 14 augusti 2027
-    </p>
-
-    <div id="countdown" class="countdown"></div>
-
-<section class="section">
-    <div class="card">
-
-        <h2>Save the Date</h2>
-
-        <p>
-            Vi är otroligt glada över att få dela denna speciella
-            helg tillsammans med er och hoppas att ni vill vara med
-            och fira när vi gifter oss den 14 augusti 2027.
-        </p>
-
-        <p>
-            Bröllopet kommer att äga rum i vackra Dalarna, en plats
-            som ligger oss varmt om hjärtat. Vi ser fram emot att
-            samla familj och vänner för en helg fylld av kärlek,
-            skratt och minnen för livet.
-        </p>
-
-        <p>
-            Festligheterna börjar redan på fredagen för er som vill
-            ansluta tidigare, så vi rekommenderar att ni planerar för
-            en hel bröllopshelg tillsammans med oss.
-        </p>
-
-        <p>
-            Hemsidan uppdateras löpande med mer information om
-            schema, boende, transport, OSA och övriga aktiviteter.
-            Spara därför gärna denna sida och titta in då och då för
-            de senaste uppdateringarna.
-        </p>
-
-        <p>
-            Vi längtar efter att få fira tillsammans med er!
-        </p>
-
-    </div>
-</section>
-
-
-
-
-</section>
-
-<section class="section">
-
-    <div class="card">
-
-        <h2>OSA</h2>
-
-        <p>
-            Vänligen svara via vårt formulär.
-        </p>
-
-        <a class="btn" href="osa.html">
-            Svara här
-        </a>
-
-    </div>
-
-
-</section>
-
-<footer>
-
-    Johan &amp; Maja 2027 ❤️
-
-</footer>
-
-<script>
-
-const weddingDate =
-new Date("August 14, 2027 07:00:00").getTime();
-
-setInterval(function() {
-
-    const now = new Date().getTime();
-    const distance = weddingDate - now;
-
-    const days =
-    Math.floor(distance / (1000 * 60 * 60 * 24));
-
-    document.getElementById("countdown").innerHTML =
-    days + " dagar kvar ❤️";
-
-}, 1000);
-
-</script>
-
-</body>
-</html>
+           
