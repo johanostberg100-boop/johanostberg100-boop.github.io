@@ -1,15 +1,168 @@
 <!DOCTYPE html>
 <html lang="sv">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Johan & Maja</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Johan & Maja</title>
+
+<style>
+
+body {
+    margin: 0;
+    font-family: Georgia, serif;
+    background: #f8f5f0;
+    color: #333;
+}
+
+.hero {
+    height: 100vh;
+    background: linear-gradient(rgba(0,0,0,0.3),
+                                rgba(0,0,0,0.3)),
+                url("https://images.unsplash.com/photo-1519741497674-611481863552?q=80&w=1400");
+    background-size: cover;
+    background-position: center;
+    color: white;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+}
+
+.hero h1{
+    font-size:4rem;
+    margin-bottom:10px;
+}
+
+.hero p{
+    font-size:1.4rem;
+}
+
+.section{
+    max-width:1000px;
+    margin:auto;
+    padding:60px 20px;
+}
+
+h2{
+    text-align:center;
+    margin-bottom:30px;
+}
+
+.card{
+    background:white;
+    padding:30px;
+    border-radius:15px;
+    box-shadow:0 4px 12px rgba(0,0,0,0.08);
+}
+
+.btn{
+    display:inline-block;
+    background:#556b2f;
+    color:white;
+    padding:15px 30px;
+    text-decoration:none;
+    border-radius:10px;
+    margin-top:20px;
+}
+
+.countdown{
+    font-size:2rem;
+    text-align:center;
+    margin-top:20px;
+}
+
+footer{
+    text-align:center;
+    padding:40px;
+    background:#eee;
+}
+
+</style>
 </head>
+
 <body>
+
+<section class="hero">
     <h1>Johan & Maja</h1>
+    <p>Vi gifter oss 18 juli 2027</p>
 
-    <p>Välkommen till vår bröllopshemsida!</p>
+    <div id="countdown" class="countdown"></div>
+</section>
 
-    <p>Mer information kommer snart.</p>
+<section class="section">
+    <div class="card">
+        <h2>Välkommen</h2>
+
+        <p>
+            Vi är glada att få fira vår stora dag tillsammans med
+            familj och vänner.
+        </p>
+
+        <p>
+            Här kommer ni hitta information om vigsel,
+            fest, boende och OSA.
+        </p>
+    </div>
+</section>
+
+<section class="section">
+    <div class="card">
+        <h2>Bröllopsdagen</h2>
+
+        <p><strong>Datum:</strong> 18 juli 2027</p>
+        <p><strong>Vigsel:</strong> TBA</p>
+        <p><strong>Middag:</strong> TBA</p>
+        <p><strong>Fest:</strong> TBA</p>
+    </div>
+</section>
+
+<section class="section">
+    <div class="card">
+        <h2>OSA</h2>
+
+        <p>
+            Klicka på knappen nedan för att svara.
+        </p>
+
+        <a class="btn" href="#">
+            OSA här
+        </a>
+    </div>
+</section>
+
+<section class="section">
+    <div class="card">
+        <h2>Boende</h2>
+
+        <p>
+            Information om hotell och transport kommer inom kort.
+        </p>
+    </div>
+</section>
+
+<footer>
+    Johan & Maja 2027 ❤️
+</footer>
+
+<script>
+
+const weddingDate = new Date("July 18, 2027 14:00:00").getTime();
+
+const x = setInterval(function() {
+
+    const now = new Date().getTime();
+    const distance = weddingDate - now;
+
+    const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+
+    document.getElementById("countdown").innerHTML =
+        days + " dagar kvar ❤️";
+
+}, 1000);
+
+</script>
+
 </body>
 </html>
