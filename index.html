@@ -8,13 +8,41 @@
 
 <style>
 
+nav {
+    background: white;
+    padding: 20px;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+nav a {
+    margin: 0 15px;
+    text-decoration: none;
+    color: #556b2f;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: #8b7355;
+}
+    
 body {
     margin: 0;
     font-family: Georgia, serif;
     background: #f8f5f0;
     color: #333;
 }
-
+    
+<nav>
+    <a href="index.html">Hem</a>
+    <a href="schema.html">Schema</a>
+    <a href="boende.html">Boende</a>
+    <a href="osa.html">OSA</a>
+    <a href="faq.html">FAQ</a>
+</nav>
+    
 .hero {
     height: 100vh;
     background: linear-gradient(rgba(0,0,0,0.3),
@@ -113,8 +141,7 @@ footer{
 
         <p><strong>Datum:</strong> 14 augusti 2027</p>
         <p><strong>Vigsel:</strong> Rättvisk kyrka</p>
-        <p><strong>Middag:</strong> TBA</p>
-        <p><strong>Fest:</strong> TBA</p>
+
     </div>
 </section>
 
@@ -148,7 +175,7 @@ footer{
 
 <script>
 
-const weddingDate = new Date("July 18, 2027 14:00:00").getTime();
+const weddingDate = new Date("Augusti 14, 2027 14:00:00").getTime();
 
 const x = setInterval(function() {
 
