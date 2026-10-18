@@ -49,4 +49,434 @@
 
             padding: 18px 20px;
 
-           
+            background: rgba(255, 255, 255, 0.96);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+            backdrop-filter: blur(8px);
+        }
+
+        nav a {
+            color: #556b2f;
+            font-weight: bold;
+            text-decoration: none;
+            letter-spacing: 0.03em;
+            transition:
+                color 0.3s ease,
+                transform 0.3s ease;
+        }
+
+        nav a:hover,
+        nav a:focus {
+            color: #8b7355;
+            transform: translateY(-1px);
+        }
+
+        nav a[aria-current="page"] {
+            color: #8b7355;
+            border-bottom: 2px solid #8b7355;
+        }
+
+        /* HUVUDBILD */
+
+        .hero {
+            min-height: calc(100vh - 70px);
+
+            /* Byt DSCF2694~3.jpg om du vill använda en annan huvudbild. */
+            background:
+                linear-gradient(
+                    rgba(0, 0, 0, 0.35),
+                    rgba(0, 0, 0, 0.35)
+                ),
+                url("DSCF2694~3.jpg");
+
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            padding: 40px 20px;
+
+            color: white;
+            text-align: center;
+        }
+
+        .hero-content {
+            max-width: 900px;
+            padding: 40px;
+
+            background: rgba(0, 0, 0, 0.16);
+            border: 1px solid rgba(255, 255, 255, 0.25);
+            border-radius: 20px;
+            backdrop-filter: blur(2px);
+        }
+
+        .hero h1 {
+            margin: 0 0 12px;
+            font-size: clamp(3rem, 8vw, 5.5rem);
+            font-weight: normal;
+            line-height: 1.05;
+            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.35);
+        }
+
+        .hero p {
+            margin: 0;
+            font-size: clamp(1.2rem, 3vw, 1.6rem);
+            letter-spacing: 0.04em;
+        }
+
+        .countdown {
+            margin-top: 25px;
+            font-size: clamp(1.35rem, 4vw, 2rem);
+            font-weight: bold;
+            text-shadow: 0 2px 8px rgba(0, 0, 0, 0.35);
+        }
+
+        /* SAVE THE DATE MED BAKGRUNDSBILD */
+
+        .save-the-date {
+            position: relative;
+
+            /* Byt images/dalarna.jpg om din bild har ett annat filnamn. */
+            background-image:
+                linear-gradient(
+                    rgba(0, 0, 0, 0.48),
+                    rgba(0, 0, 0, 0.48)
+                ),
+                url("images/dalarna.jpg");
+
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+
+            padding: 120px 20px;
+
+            color: white;
+        }
+
+        .overlay {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 55px;
+
+            text-align: center;
+
+            background: rgba(20, 25, 15, 0.52);
+            border: 1px solid rgba(255, 255, 255, 0.25);
+            border-radius: 20px;
+            box-shadow: 0 12px 35px rgba(0, 0, 0, 0.22);
+            backdrop-filter: blur(3px);
+        }
+
+        .overlay h2 {
+            margin-top: 0;
+            margin-bottom: 30px;
+
+            color: white;
+            font-size: clamp(2.2rem, 6vw, 3.2rem);
+            font-weight: normal;
+        }
+
+        .overlay p {
+            max-width: 760px;
+            margin: 0 auto 22px;
+
+            font-size: 1.15rem;
+            line-height: 1.9;
+        }
+
+        .overlay p:last-child {
+            margin-bottom: 0;
+        }
+
+        /* VANLIGA INNEHÅLLSSEKTIONER */
+
+        .section {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 70px 20px;
+        }
+
+        .card {
+            padding: 40px;
+
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+            text-align: center;
+        }
+
+        h2 {
+            margin-top: 0;
+            margin-bottom: 25px;
+
+            color: #556b2f;
+            font-size: clamp(2rem, 5vw, 2.7rem);
+            font-weight: normal;
+            text-align: center;
+        }
+
+        .card p {
+            max-width: 680px;
+            margin: 0 auto 22px;
+            font-size: 1.1rem;
+        }
+
+        .card p:last-of-type {
+            margin-bottom: 0;
+        }
+
+        /* KNAPP */
+
+        .btn {
+            display: inline-block;
+            margin-top: 28px;
+            padding: 15px 32px;
+
+            background: #556b2f;
+            color: white;
+
+            border-radius: 10px;
+            text-decoration: none;
+            font-weight: bold;
+
+            transition:
+                background 0.3s ease,
+                transform 0.3s ease,
+                box-shadow 0.3s ease;
+        }
+
+        .btn:hover,
+        .btn:focus {
+            background: #6f8541;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 16px rgba(85, 107, 47, 0.25);
+        }
+
+        /* SIDFOT */
+
+        footer {
+            padding: 40px 20px;
+
+            background: #e9e4dc;
+            color: #556b2f;
+
+            text-align: center;
+        }
+
+        /* MOBILANPASSNING */
+
+        @media (max-width: 768px) {
+
+            nav {
+                gap: 10px 18px;
+                padding: 14px 12px;
+            }
+
+            nav a {
+                font-size: 0.95rem;
+            }
+
+            .hero {
+                min-height: 85vh;
+                background-position: center;
+            }
+
+            .hero-content {
+                width: 100%;
+                padding: 28px 20px;
+            }
+
+            .save-the-date {
+                padding: 70px 16px;
+
+                /*
+                Bakgrund som är fixerad fungerar inte alltid bra på mobil.
+                Därför används scroll på mindre skärmar.
+                */
+                background-attachment: scroll;
+            }
+
+            .overlay {
+                padding: 35px 22px;
+            }
+
+            .overlay p {
+                font-size: 1.05rem;
+                line-height: 1.75;
+            }
+
+            .section {
+                padding: 45px 16px;
+            }
+
+            .card {
+                padding: 30px 22px;
+            }
+        }
+
+        @media (max-width: 480px) {
+
+            nav {
+                justify-content: space-evenly;
+            }
+
+            nav a {
+                margin: 3px 5px;
+                font-size: 0.9rem;
+            }
+
+            .hero-content {
+                background: rgba(0, 0, 0, 0.22);
+            }
+
+            .countdown {
+                margin-top: 20px;
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <nav aria-label="Huvudnavigation">
+        <a href="index.html" aria-current="page">Hem</a>
+        <a href="schema.html">Bröllopshelg</a>
+        <a href="boende.html">Boende</a>
+        <a href="osa.html">OSA</a>
+        <a href="faq.html">FAQ</a>
+    </nav>
+
+    <main>
+
+        <section class="hero">
+
+            <div class="hero-content">
+
+                <h1>Johan &amp; Maja</h1>
+
+                <p>Vi gifter oss den 14 augusti 2027</p>
+
+                <div
+                    id="countdown"
+                    class="countdown"
+                    aria-live="polite"
+                ></div>
+
+            </div>
+
+        </section>
+
+        <section class="save-the-date">
+
+            <div class="overlay">
+
+                <h2>Save the Date</h2>
+
+                <p>
+                    Vi är otroligt glada över att få dela denna speciella
+                    helg tillsammans med er och hoppas att ni vill vara med
+                    och fira när vi gifter oss den 14 augusti 2027.
+                </p>
+
+                <p>
+                    Bröllopet kommer såklart att äga rum i fina Dalarna,
+                    en plats som ligger oss varmt om hjärtat. Vi ser fram
+                    emot att samla familj och vänner för en helg fylld av
+                    kärlek, skratt och minnen för livet.
+                </p>
+
+                <p>
+                    Festligheterna börjar redan på fredagen, så planera
+                    gärna för en hel bröllopshelg tillsammans med oss.
+                    Mer information om helgens aktiviteter kommer längre fram.
+                </p>
+
+                <p>
+                    Hemsidan uppdateras löpande med information om schema,
+                    boende, transport, OSA och andra aktiviteter. Spara
+                    därför gärna hemsidan och besök den igen för att ta del
+                    av de senaste uppdateringarna.
+                </p>
+
+                <p>
+                    Vi längtar efter att få fira tillsammans med er!
+                </p>
+
+            </div>
+
+        </section>
+
+        <section class="section">
+
+            <div class="card">
+
+                <h2>OSA</h2>
+
+                <p>
+                    Vi hoppas att ni vill vara med och fira vår stora dag.
+                    Svara gärna via vårt OSA-formulär.
+                </p>
+
+                <a class="btn" href="osa.html">
+                    Svara här
+                </a>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <footer>
+        Johan &amp; Maja 2027 ❤️
+    </footer>
+
+    <script>
+
+        /*
+        Bröllopsdatumet anges här.
+        Formatet 2027-08-14T07:00:00+02:00 betyder:
+        14 augusti 2027 klockan 07.00 svensk sommartid.
+        */
+
+        const weddingDate =
+            new Date("2027-08-14T07:00:00+02:00").getTime();
+
+        const countdownElement =
+            document.getElementById("countdown");
+
+        function updateCountdown() {
+
+            const now = new Date().getTime();
+            const distance = weddingDate - now;
+
+            if (distance <= 0) {
+
+                countdownElement.textContent =
+                    "Idag är det dags! ❤️";
+
+                return;
+            }
+
+            const days = Math.floor(
+                distance / (1000 * 60 * 60 * 24)
+            );
+
+            countdownElement.textContent =
+                days + " dagar kvar ❤️";
+        }
+
+        updateCountdown();
+
+        setInterval(updateCountdown, 1000);
+
+    </script>
+
+</body>
+
+</html>
