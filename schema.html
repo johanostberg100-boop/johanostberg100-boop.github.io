@@ -17,10 +17,13 @@ body {
 }
 
 nav {
-    background: white;
-    padding: 20px;
+    background: rgba(255,255,255,0.95);
+    padding: 18px;
     text-align: center;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.08);
 }
 
 nav a {
@@ -30,36 +33,60 @@ nav a {
     font-weight: bold;
 }
 
+nav a:hover {
+    color: #8b7355;
+}
+
 h1 {
     text-align: center;
     margin-top: 50px;
 }
 
-.timeline {
-    max-width: 800px;
-    margin: 50px auto;
+.intro {
+    text-align: center;
+    max-width: 700px;
+    margin: auto;
+    padding: 0 20px 40px 20px;
+}
+
+.container {
+    max-width: 1100px;
+    margin: auto;
     padding: 20px;
 }
 
-.event {
+.card {
     background: white;
-    margin-bottom: 20px;
-    padding: 25px;
-    border-radius: 12px;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+    border-radius: 15px;
+    padding: 30px;
+    margin-bottom: 30px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+.card h2 {
+    margin-top: 0;
+    color: #556b2f;
+}
+
+.schedule-item {
+    padding: 10px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.schedule-item:last-child {
+    border-bottom: none;
 }
 
 .time {
-    color: #556b2f;
     font-weight: bold;
-    font-size: 1.2rem;
+    color: #556b2f;
 }
 
 footer {
     text-align: center;
     padding: 40px;
-    margin-top: 50px;
     background: #eee;
+    margin-top: 50px;
 }
 
 </style>
@@ -76,50 +103,76 @@ footer {
     <a href="faq.html">FAQ</a>
 </nav>
 
-<h1>Bröllopsdagen</h1>
+<h1>Bröllopshelgen</h1>
 
-<div class="timeline">
+<div class="intro">
+    Här hittar ni schema för hela bröllopshelgen.
+</div>
 
-    <div class="event">
-        <div class="time">13:00</div>
-        <h3>Välkomstmingel</h3>
-        <p>Vi samlas för bubbel och välkomnar alla gäster.</p>
+<div class="container">
+
+    <!-- FREDAG -->
+
+    <div class="card">
+
+        <h2>Fredag 13 augusti</h2>
+
+        <!-- LÄGG IN FREDAGENS SCHEMA HÄR -->
+
+        <div class="schedule-item">
+            <span class="time">18:00</span> - Exempelaktivitet
+        </div>
+
+        <div class="schedule-item">
+            <span class="time">20:00</span> - Exempelaktivitet
+        </div>
+
     </div>
 
-    <div class="event">
-        <div class="time">14:00</div>
-        <h3>Vigsel</h3>
-        <p>Ceremonin börjar.</p>
+    <!-- LÖRDAG -->
+
+    <div class="card">
+
+        <h2>Lördag 14 augusti</h2>
+
+        <!-- LÄGG IN LÖRDAGENS SCHEMA HÄR -->
+
+        <div class="schedule-item">
+            <span class="time">13:00</span> - Exempelaktivitet
+        </div>
+
+        <div class="schedule-item">
+            <span class="time">15:00</span> - Exempelaktivitet
+        </div>
+
+        <div class="schedule-item">
+            <span class="time">18:00</span> - Exempelaktivitet
+        </div>
+
     </div>
 
-    <div class="event">
-        <div class="time">15:00</div>
-        <h3>Fotografering & mingel</h3>
-        <p>Brudparet fotograferas medan gästerna minglar.</p>
-    </div>
+    <!-- SÖNDAG -->
 
-    <div class="event">
-        <div class="time">17:00</div>
-        <h3>Middag</h3>
-        <p>Trerättersmiddag och tal.</p>
-    </div>
+    <div class="card">
 
-    <div class="event">
-        <div class="time">21:00</div>
-        <h3>Bröllopsdans</h3>
-        <p>Brudparets första dans.</p>
-    </div>
+        <h2>Söndag 15 augusti</h2>
 
-    <div class="event">
-        <div class="time">22:00</div>
-        <h3>Fest</h3>
-        <p>Dansgolvet öppnar.</p>
+        <!-- LÄGG IN SÖNDAGENS SCHEMA HÄR -->
+
+        <div class="schedule-item">
+            <span class="time">09:00</span> - Exempelaktivitet
+        </div>
+
+        <div class="schedule-item">
+            <span class="time">11:00</span> - Exempelaktivitet
+        </div>
+
     </div>
 
 </div>
 
 <footer>
-    Johan & Maja 2027 ❤️
+    Johan &amp; Maja 2027 ❤️
 </footer>
 
 </body>
