@@ -2,100 +2,153 @@
 <html lang="sv">
 
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Schema | Johan & Maja</title>
+    <title>Bröllopshelgen | Johan & Maja</title>
 
-<style>
+    <style>
 
-body {
-    margin: 0;
-    font-family: Georgia, serif;
-    background: #f8f5f0;
-    color: #333;
-}
+        * {
+            box-sizing: border-box;
+        }
 
-nav {
-    background: rgba(255,255,255,0.95);
-    padding: 18px;
-    text-align: center;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.08);
-}
+        body {
+            margin: 0;
+            font-family: Georgia, serif;
+            background: #f8f5f0;
+            color: #333;
+        }
 
-nav a {
-    margin: 0 15px;
-    text-decoration: none;
-    color: #556b2f;
-    font-weight: bold;
-}
+        nav {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
 
-nav a:hover {
-    color: #8b7355;
-}
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 28px;
 
-h1 {
-    text-align: center;
-    margin-top: 50px;
-}
+            padding: 18px 20px;
 
-.intro {
-    text-align: center;
-    max-width: 700px;
-    margin: auto;
-    padding: 0 20px 40px 20px;
-}
+            background: rgba(255,255,255,0.96);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+            backdrop-filter: blur(8px);
+        }
 
-.container {
-    max-width: 1100px;
-    margin: auto;
-    padding: 20px;
-}
+        nav a {
+            color: #556b2f;
+            font-weight: bold;
+            text-decoration: none;
+            transition: 0.3s;
+        }
 
-.card {
-    background: white;
-    border-radius: 15px;
-    padding: 30px;
-    margin-bottom: 30px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-}
+        nav a:hover {
+            color: #8b7355;
+        }
 
-.card h2 {
-    margin-top: 0;
-    color: #556b2f;
-}
+        nav a[aria-current="page"] {
+            color: #8b7355;
+            border-bottom: 2px solid #8b7355;
+        }
 
-.schedule-item {
-    padding: 10px 0;
-    border-bottom: 1px solid #eee;
-}
+        .hero {
+            text-align: center;
+            padding: 80px 20px 40px;
+        }
 
-.schedule-item:last-child {
-    border-bottom: none;
-}
+        .hero h1 {
+            color: #556b2f;
+            font-size: clamp(2.5rem, 6vw, 4rem);
+            margin-bottom: 15px;
+            font-weight: normal;
+        }
 
-.time {
-    font-weight: bold;
-    color: #556b2f;
-}
+        .hero p {
+            max-width: 700px;
+            margin: auto;
+            font-size: 1.15rem;
+            line-height: 1.8;
+        }
 
-footer {
-    text-align: center;
-    padding: 40px;
-    background: #eee;
-    margin-top: 50px;
-}
+        .container {
+            max-width: 1100px;
+            margin: auto;
+            padding: 20px;
+        }
 
-</style>
+        .card {
+            background: white;
+            padding: 35px;
+            border-radius: 18px;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+        }
+
+        .card h2 {
+            margin-top: 0;
+            color: #556b2f;
+            font-size: 2rem;
+        }
+
+        .schedule-item {
+            padding: 15px 0;
+            border-bottom: 1px solid #eee;
+        }
+
+        .schedule-item:last-child {
+            border-bottom: none;
+        }
+
+        .time {
+            display: inline-block;
+            min-width: 120px;
+            color: #556b2f;
+            font-weight: bold;
+        }
+
+        footer {
+            text-align: center;
+            padding: 40px;
+            margin-top: 60px;
+            background: #e9e4dc;
+            color: #556b2f;
+        }
+
+        @media (max-width: 768px) {
+
+            nav {
+                gap: 12px;
+                padding: 14px;
+            }
+
+            nav a {
+                font-size: 0.95rem;
+            }
+
+            .time {
+                display: block;
+                margin-bottom: 8px;
+            }
+
+            .card {
+                padding: 28px 22px;
+            }
+
+            .hero {
+                padding-top: 50px;
+            }
+        }
+
+    </style>
 
 </head>
 
 <body>
 
-<nav>
+<nav aria-label="Huvudnavigation">
     <a href="index.html">Hem</a>
     <a href="schema.html" aria-current="page">Bröllopshelg</a>
     <a href="boende.html">Boende</a>
@@ -103,11 +156,18 @@ footer {
     <a href="faq.html">FAQ</a>
 </nav>
 
-<h1>Bröllopshelgen</h1>
+<section class="hero">
 
-<div class="intro">
-    Här hittar ni schema för hela bröllopshelgen.
-</div>
+    <h1>Bröllopshelgen</h1>
+
+    <p>
+        Vi ser fram emot att få spendera en hel helg tillsammans
+        med familj och vänner. Här hittar ni det preliminära
+        schemat för helgen. Hemsidan uppdateras löpande när fler
+        detaljer faller på plats.
+    </p>
+
+</section>
 
 <div class="container">
 
@@ -117,15 +177,26 @@ footer {
 
         <h2>Fredag 13 augusti</h2>
 
-        <!-- LÄGG IN FREDAGENS SCHEMA HÄR -->
-
         <div class="schedule-item">
-            <span class="time">Förmiddag</span> - Birdies, Bogeys och Bröllopsnerver! Golftävling för alla golfsugna!
+            <span class="time">Förmiddag</span>
+            Birdies, Bogeys och Bröllopsnerver! Golftävling för alla golfsugna.
         </div>
 
         <div class="schedule-item">
-            <span class="time">Eftermiddag/Kväll</span> - Grill och Häng i Tällberg, Laknäs
+            <span class="time">Eftermiddag / Kväll</span>
+            Grill och häng i Tällberg, Laknäs.
         </div>
+
+        <!--
+        LÄGG TILL FLER AKTIVITETER HÄR
+
+        Exempel:
+
+        <div class="schedule-item">
+            <span class="time">20:00</span>
+            Quiz och mingel.
+        </div>
+        -->
 
     </div>
 
@@ -135,17 +206,19 @@ footer {
 
         <h2>Lördag 14 augusti</h2>
 
-        <!-- LÄGG IN LÖRDAGENS SCHEMA HÄR -->
-
         <div class="schedule-item">
-            <span class="time">13:00</span> - Vigsel i Rättviks kyrka
+            <span class="time">13:00</span>
+            Vigsel i Rättviks kyrka.
         </div>
 
         <div class="schedule-item">
-            <span class="time">Från 15:00</span> - Mingel, Bröllopsmiddag och fest i Tällberg, Laknäs!  
+            <span class="time">Från 15:00</span>
+            Mingel, bröllopsmiddag och fest i Tällberg, Laknäs.
         </div>
 
-
+        <!--
+        LÄGG TILL FLER AKTIVITETER HÄR
+        -->
 
     </div>
 
@@ -155,12 +228,14 @@ footer {
 
         <h2>Söndag 15 augusti</h2>
 
-        <!-- LÄGG IN SÖNDAGENS SCHEMA HÄR -->
-
         <div class="schedule-item">
-            <span class="time">Morgon</span> - Gemensam frukosthäng på Hotell Klockargården
+            <span class="time">Morgon</span>
+            Gemensam frukosthäng på Hotell Klockargården.
         </div>
 
+        <!--
+        LÄGG TILL FLER AKTIVITETER HÄR
+        -->
 
     </div>
 
@@ -171,5 +246,4 @@ footer {
 </footer>
 
 </body>
-
 </html>
