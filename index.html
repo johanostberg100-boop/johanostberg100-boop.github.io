@@ -6,7 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
      <title>Hem | Johan & Maja</title>
-    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500&display=swap" rel="stylesheet">
     <style>
 
         * {
@@ -99,13 +102,22 @@ nav a[aria-current="page"] {
             padding: 20px;
         }
 
-        .hero h1 {
-            margin: 0 0 12px;
-            font-size: clamp(3rem, 8vw, 5.5rem);
-            font-weight: normal;
-            line-height: 1.05;
-            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.35);
-        }
+.hero h1 {
+    margin: 0 0 12px;
+
+    font-family: 'Cormorant Garamond', serif;
+
+    font-size: clamp(4rem, 10vw, 7rem);
+
+    font-weight: 400;
+
+    letter-spacing: 0.03em;
+
+    line-height: 1;
+
+    text-shadow:
+        0 2px 10px rgba(0,0,0,0.35);
+}
 
         .hero p {
             margin: 0;
