@@ -62,22 +62,48 @@ nav a[aria-current="page"] {
 
 
         .hero {
-            text-align: center;
-            padding: 80px 20px 40px;
-        }
+    min-height: 55vh;
 
-        .hero h1 {
-            color: #556b2f;
-            font-size: clamp(2.5rem, 6vw, 4rem);
-            font-weight: normal;
-        }
+    background:
+        linear-gradient(
+            rgba(0,0,0,0.35),
+            rgba(0,0,0,0.35)
+        ),
+        url("hotell-klockargarden.jpg");
 
-        .hero p {
-            max-width: 700px;
-            margin: auto;
-            line-height: 1.8;
-            font-size: 1.15rem;
-        }
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 40px 20px;
+
+    text-align: center;
+    color: white;
+}
+
+.hero-content {
+    max-width: 800px;
+}
+
+.hero h1 {
+    font-size: clamp(2.8rem, 6vw, 4.5rem);
+    margin-bottom: 20px;
+
+    text-shadow:
+        0 2px 10px rgba(0,0,0,0.4);
+}
+
+.hero p {
+    font-size: 1.2rem;
+    line-height: 1.8;
+
+    text-shadow:
+        0 2px 10px rgba(0,0,0,0.4);
+}
 
         .container {
             max-width: 1000px;
@@ -168,12 +194,17 @@ nav a[aria-current="page"] {
 
 <section class="hero">
 
-    <h1>Boende</h1>
+    <div class="hero-content">
 
-    <p>
-        För att få ut så mycket som möjligt av bröllopshelgen
-        har vi reserverat boende för våra gäster så ni har möjlighet att boka era hotellrum fram till 30e november.
-    </p>
+        <h1>Boende</h1>
+
+        <p>
+            För att alla ska få ut så mycket som möjligt av
+            bröllopshelgen så har vi reserverat hotellrum
+            för våra gäster på Klockargården!
+        </p>
+
+    </div>
 
 </section>
 
@@ -194,21 +225,22 @@ nav a[aria-current="page"] {
         </p>
 
         <p>
-            För att boka mailar man sin bokning till info@klockargarden.com. Det som man behöver ange är: namn på samtliga som ska bo på hotellet, mobilnummer, och mailadress
+            För att boka mailar man sin bokning till info@klockargarden.com. Det som man behöver ange är: Namn på samtliga som ska bo på hotellet, Mobilnummer, och Mailadress
         </p>
-
+        
+        <p>
+            Sista dag att skicka anmälan är 30de november.
+        </p>
+        
         <a class="btn"
            href="https://www.klockargarden.com"
            target="_blank">
            Besök Klockargården
         </a>
 
-
-        
-        
         <a class="btn"
    href="mailto:info@klockargarden.com?subject=Bokning%20Bröllop%20Johan%20och%20Maja%202027">
-   Skicka bokningsförfrågan
+   Skicka in bokning
         </a>
         
     </div>
